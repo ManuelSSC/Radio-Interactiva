@@ -1,15 +1,22 @@
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaCommentDots } from "react-icons/fa";
+import Path from "../img/1.jpg";
 import "../styles/Programs.css";
 
 export function Programs() {
   const totalImages = 13; // Número total de imágenes
-  const basePath = "/src/img/Spreaker-Visuals/"; // Ruta base
+
+  // Extraer la ruta base de Path
+  const basePath = Path.substring(0, Path.lastIndexOf("/") + 1);
+
+  // Generar las rutas dinámicas para las imágenes
   const programPhotos = Array.from(
     { length: totalImages },
     (_, index) => `${basePath}${index + 1}.jpg`
   );
+
+  //-----------------------------------------------------------------
   const galleryRef = useRef(null);
   const scrollLeft = () => {
     if (galleryRef.current) {
@@ -21,6 +28,7 @@ export function Programs() {
       galleryRef.current.scrollBy({ left: 200, behavior: "smooth" });
     }
   };
+
   return (
     <div className="gallery-wrap">
       <div className="gallery-title">
