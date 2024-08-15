@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaCommentDots } from "react-icons/fa";
-import Path from "../img/4.jpg";
+import Path from "/public/static/images/1.jpg";
 import "../styles/Programs.css";
 export function Programs() {
   const totalImages = 13; // Número total de imágenes
@@ -32,7 +32,7 @@ export function Programs() {
         {programPhotos.map((photo, index) => (
           <div key={index}>
             <span>
-              <img src={Path} alt={`Spreaker Visuals ${index + 1}`} />
+              <img src={photo} alt={`Spreaker Visuals ${index + 1}`} />
             </span>
           </div>
         ))}
