@@ -20,7 +20,7 @@ export function Navbar() {
     <nav className="navbar">
       <div className="top-navbar">
         <div className="follow-box">
-          <p className="bold">Manuel</p>
+          <p className="bold">Siguenos en:</p>
           <div className="follow-icons">
             <i>{<FaInstagram />}</i>
             <i>{<FaSpotify />}</i>
